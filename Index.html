@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="theme-color"
+      content="#0f2027">
+
+<title>Third Professional MBBS Examination</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f2027,
+            #203a43,
+            #2c5364
+        );
+}
+
+
+/* ================= PAGE ================= */
+
+.page {
+
+    width: min(100%, 850px);
+
+    margin: auto;
+
+    padding:
+        max(20px, env(safe-area-inset-top))
+        15px
+        max(30px, env(safe-area-inset-bottom));
+}
+
+
+/* ================= HEADER ================= */
+
+.hero {
+
+    text-align: center;
+
+    padding: 12px 0 20px;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding: 5px 13px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    background:
+        rgba(255,255,255,.08);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+h1 {
+
+    margin: 10px 0 3px;
+
+    font-size:
+        clamp(1.6rem, 7vw, 2.7rem);
+
+    line-height: 1.2;
+}
+
+
+.subtitle {
+
+    margin: 0;
+
+    color: #cbd7db;
+
+    font-size: 13px;
+}
+
+
+/* ================= COMMON CARD ================= */
+
+.card {
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    background:
+        rgba(255,255,255,.075);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.2);
+}
+
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-card {
+
+    padding: 22px 12px;
+
+    text-align: center;
+}
+
+
+.eyebrow {
+
+    margin: 0 0 5px;
+
+    color: #b9cbd0;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.countdown-card h2 {
+
+    margin: 0;
+
+    font-size:
+        clamp(18px, 5vw, 24px);
+
+    line-height: 1.35;
+}
+
+
+.event-date {
+
+    margin: 5px 0 17px;
+
+    color: #d4dfe2;
+
+    font-size: 12px;
+}
+
+
+/* ================= TIMER ================= */
+
+.timer {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 7px;
+
+    max-width: 570px;
+
+    margin: auto;
+}
+
+
+.time-box {
+
+    padding: 13px 4px 10px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,.1);
+}
+
+
+.time-box span {
+
+    display: block;
+
+    font-size:
+        clamp(22px, 8vw, 38px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.time-box small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #cbd5d8;
+
+    font-size: 10px;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+
+    margin-top: 18px;
+
+    padding: 19px 14px;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    gap: 10px;
+}
+
+
+.section-title h2 {
+
+    margin: 0;
+
+    font-size: 19px;
+}
+
+
+.time-pill {
+
+    white-space: nowrap;
+
+    padding: 6px 9px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,.1);
+
+    color: #d6e0e3;
+
+    font-size: 10px;
+}
+
+
+/* ================= EXAM SCHEDULE ================= */
+
+.schedule-list {
+
+    display: grid;
+
+    gap: 8px;
+
+    margin-top: 14px;
+}
+
+
+.schedule-row {
+
+    display: grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 11px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(0,0,0,.13);
+}
+
+
+.date {
+
+    min-height: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+
+.date strong {
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+.date span {
+
+    margin-top: 4px;
+
+    color: #c5d0d3;
+
+    font-size: 8px;
+}
+
+
+.schedule-row h3 {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+}
+
+
+.schedule-row p {
+
+    margin: 3px 0 0;
+
+    color: #aebfc3;
+
+    font-size: 10px;
+}
+
+
+/* ================= PRACTICAL ================= */
+
+.practical-card {
+
+    text-align: center;
+}
+
+
+.practical-card h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+.practical-description {
+
+    margin: 5px 0 16px;
+
+    color: #c3d0d4;
+
+    font-size: 11px;
+}
+
+
+.practical-date {
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 150px;
+
+    padding: 16px 22px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,.09);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+}
+
+
+.practical-date strong {
+
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+.practical-date span {
+
+    margin-top: 6px;
+
+    color: #cbd7da;
+
+    font-size: 11px;
+}
+
+
+/* ================= INFO ================= */
+
+.info-box {
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(0,0,0,.13);
+
+    color: #c7d3d6;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 24px;
+
+    color: #94a5aa;
+
+    font-size: 9px;
+}
+
+
+/* ================= LARGER SCREENS ================= */
+
+@media (min-width: 600px) {
+
+    .page {
+
+        padding-left: 24px;
+
+        padding-right: 24px;
+    }
+
+
+    .section {
+
+        padding: 22px;
+    }
+
+
+    .countdown-card {
+
+        padding:
+            28px 20px 22px;
+    }
+
+
+    .schedule-row {
+
+        grid-template-columns:
+            82px 1fr;
+
+        padding: 13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="page">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="hero">
+
+        <div class="badge">
+            PROFESSIONAL EXAMINATION
+        </div>
+
+
+        <h1>
+            3RD PROFESSIONAL MBBS
+        </h1>
+
+
+        <p class="subtitle">
+            November 2026 • New Curriculum
+        </p>
+
+    </header>
+
+
+
+    <!-- ================= COUNTDOWN ================= -->
+
+    <section class="card countdown-card">
+
+
+        <p class="eyebrow">
+            NEXT EXAMINATION
+        </p>
+
+
+        <h2 id="nextEvent">
+            Loading...
+        </h2>
+
+
+        <p id="nextDate"
+           class="event-date">
+        </p>
+
+
+        <div class="timer">
+
+
+            <div class="time-box">
+
+                <span id="days">
+                    00
+                </span>
+
+                <small>
+                    Days
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="hours">
+                    00
+                </span>
+
+                <small>
+                    Hours
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="minutes">
+                    00
+                </span>
+
+                <small>
+                    Min
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="seconds">
+                    00
+                </span>
+
+                <small>
+                    Sec
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WRITTEN EXAM ================= -->
+
+    <section class="card section">
+
+
+        <div class="section-title">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    WRITTEN EXAMINATION
+                </p>
+
+                <h2>
+                    Examination Schedule
+                </h2>
+
+            </div>
+
+
+            <span class="time-pill">
+                November 2026
+            </span>
+
+
+        </div>
+
+
+
+        <div class="schedule-list">
+
+
+            <!-- 05 NOVEMBER -->
+
+            <article class="schedule-row">
+
+
+                <div class="date">
+
+                    <strong>
+                        05
+                    </strong>
+
+                    <span>
+                        NOV 2026
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Community Medicine &amp;
+                        Public Health
+                    </h3>
+
+                    <p>
+                        Thursday • Written Examination
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 12 NOVEMBER -->
+
+            <article class="schedule-row">
+
+
+                <div class="date">
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <span>
+                        NOV 2026
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Pathology
+                    </h3>
+
+                    <p>
+                        Thursday • Written Examination
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 16 NOVEMBER -->
+
+            <article class="schedule-row">
+
+
+                <div class="date">
+
+                    <strong>
+                        16
+                    </strong>
+
+                    <span>
+                        NOV 2026
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Microbiology
+                    </h3>
+
+                    <p>
+                        Monday • Written Examination
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ORAL & PRACTICAL ================= -->
+
+    <section class="card section practical-card">
+
+
+        <p class="eyebrow">
+            ORAL &amp; PRACTICAL
+        </p>
+
+
+        <h2>
+            Oral &amp; Practical Examination
+        </h2>
+
+
+        <p class="practical-description">
+            Commencing date
+        </p>
+
+
+        <div class="practical-date">
+
+            <strong>
+                22
+            </strong>
+
+            <span>
+                NOVEMBER 2026
+            </span>
+
+        </div>
+
+
+        <div class="info-box">
+
+            Oral &amp; Practical Examination
+            will commence from
+            <strong>
+                22 November 2026
+            </strong>.
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= EXAM INFORMATION ================= -->
+
+    <section class="card section">
+
+
+        <div class="section-title">
+
+            <div>
+
+                <p class="eyebrow">
+                    THIRD PROFESSIONAL
+                </p>
+
+                <h2>
+                    Examination Subjects
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="schedule-list">
+
+
+            <article class="schedule-row">
+
+                <div class="date">
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <span>
+                        SUBJECT
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Community Medicine &amp;
+                        Public Health
+                    </h3>
+
+                    <p>
+                        Written • Oral • Practical
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="schedule-row">
+
+                <div class="date">
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        SUBJECT
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Pathology
+                    </h3>
+
+                    <p>
+                        Written • Oral • Practical
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="schedule-row">
+
+                <div class="date">
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <span>
+                        SUBJECT
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Microbiology
+                    </h3>
+
+                    <p>
+                        Written • Oral • Practical
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Third Professional MBBS Examination
+
+    </footer>
+
+
+</main>
+
+
+
+<script>
+
+
+/* =====================================================
+   EXAMINATION EVENTS
+   ===================================================== */
+
+const events = [
+
+    {
+        date: "2026-11-05T10:00:00",
+        title: "Community Medicine & Public Health",
+        type: "Written Examination"
+    },
+
+
+    {
+        date: "2026-11-12T10:00:00",
+        title: "Pathology",
+        type: "Written Examination"
+    },
+
+
+    {
+        date: "2026-11-16T10:00:00",
+        title: "Microbiology",
+        type: "Written Examination"
+    },
+
+
+    {
+        date: "2026-11-22T09:00:00",
+        title: "Oral & Practical Examination",
+        type: "Professional Examination"
+    }
+
+];
+
+
+
+/* =====================================================
+   DATE FORMAT
+   ===================================================== */
+
+function formatDate(date) {
+
+    return date.toLocaleDateString(
+
+        "en-GB",
+
+        {
+
+            weekday: "long",
+
+            day: "2-digit",
+
+            month: "long",
+
+            year: "numeric"
+
+        }
+
+    );
+
+}
+
+
+
+/* =====================================================
+   COUNTDOWN
+   ===================================================== */
+
+function updateCountdown() {
+
+
+    const now =
+        new Date();
+
+
+    /* Find next examination */
+
+    const next =
+        events.find(
+
+            event =>
+                new Date(event.date) > now
+
+        );
+
+
+
+    /* =================================================
+       ALL EXAMS COMPLETED
+       ================================================= */
+
+    if (!next) {
+
+
+        document
+            .getElementById("nextEvent")
+            .textContent =
+                "All examinations completed";
+
+
+        document
+            .getElementById("nextDate")
+            .textContent =
+                "Congratulations!";
+
+
+        document
+            .querySelector(".timer")
+            .innerHTML = `
+
+                <div
+                    class="time-box"
+                    style="grid-column:1/-1">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <small>
+                        Completed
+                    </small>
+
+                </div>
+
+            `;
+
+
+        return;
+
+    }
+
+
+
+    /* =================================================
+       TARGET
+       ================================================= */
+
+    const target =
+        new Date(next.date);
+
+
+    const gap =
+        target - now;
+
+
+
+    /* =================================================
+       EVENT TITLE
+       ================================================= */
+
+    document
+        .getElementById("nextEvent")
+        .textContent =
+            `${next.title} — ${next.type}`;
+
+
+
+    /* =================================================
+       EVENT DATE
+       ================================================= */
+
+    document
+        .getElementById("nextDate")
+        .textContent =
+
+            `${formatDate(target)} • ${
+                target.toLocaleTimeString(
+                    [],
+                    {
+                        hour: "2-digit",
+                        minute: "2-digit"
+                    }
+                )
+            }`;
+
+
+
+    /* =================================================
+       TIME CALCULATION
+       ================================================= */
+
+    const totalSeconds =
+
+        Math.max(
+
+            0,
+
+            Math.floor(
+                gap / 1000
+            )
+
+        );
+
+
+
+    const days =
+
+        Math.floor(
+            totalSeconds / 86400
+        );
+
+
+
+    const hours =
+
+        Math.floor(
+
+            (totalSeconds % 86400)
+            / 3600
+
+        );
+
+
+
+    const minutes =
+
+        Math.floor(
+
+            (totalSeconds % 3600)
+            / 60
+
+        );
+
+
+
+    const seconds =
+
+        totalSeconds % 60;
+
+
+
+    /* =================================================
+       DISPLAY
+       ================================================= */
+
+    document
+        .getElementById("days")
+        .textContent =
+
+            String(days)
+                .padStart(2, "0");
+
+
+    document
+        .getElementById("hours")
+        .textContent =
+
+            String(hours)
+                .padStart(2, "0");
+
+
+    document
+        .getElementById("minutes")
+        .textContent =
+
+            String(minutes)
+                .padStart(2, "0");
+
+
+    document
+        .getElementById("seconds")
+        .textContent =
+
+            String(seconds)
+                .padStart(2, "0");
+
+}
+
+
+
+/* =====================================================
+   START COUNTDOWN
+   ===================================================== */
+
+updateCountdown();
+
+
+setInterval(
+
+    updateCountdown,
+
+    1000
+
+);
+
+</script>
+
+
+</body>
+
+</html>
