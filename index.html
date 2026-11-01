@@ -1,293 +1,281 @@
-<!-- ================= EXAM ROLL DIRECTORY ================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="card section" id="rollDirectory">
+<head>
 
+<meta charset="UTF-8">
 
-    <div class="section-title">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+<meta name="theme-color"
+      content="#0f2027">
 
-        <div>
+<title>Third Professional MBBS Examination</title>
+<link rel="icon" type="image/png" href="1.png">
 
-            <p class="eyebrow">
-                EXAM ROLL DIRECTORY
-            </p>
-
-            <h2>
-                Search Your Roll
-            </h2>
-
-        </div>
-
-
-        <span class="time-pill">
-            84 Students
-        </span>
-
-
-    </div>
-
-
-
-    <!-- SEARCH BOX -->
-
-    <div class="roll-search-wrap">
-
-        <input
-            type="text"
-            id="rollSearch"
-            class="roll-search"
-            placeholder="Type class roll, exam roll or name..."
-            autocomplete="off"
-            inputmode="text">
-
-    </div>
-
-
-
-    <!-- RESULTS COUNT -->
-
-    <p id="rollResultsCount" class="roll-results-count">
-        Showing all 84 students
-    </p>
-
-
-
-    <!-- DROPDOWN ACCORDION -->
-
-    <div class="roll-accordion" id="rollAccordion">
-
-
-        <button
-            type="button"
-            class="roll-accordion-toggle"
-            id="rollToggle"
-            aria-expanded="false"
-            aria-controls="rollAccordionBody">
-
-            <span>
-                <span class="roll-toggle-icon">▸</span>
-                View All Students
-            </span>
-
-            <span class="roll-toggle-count" id="rollToggleCount">
-                84
-            </span>
-
-        </button>
-
-
-
-        <div
-            class="roll-accordion-body"
-            id="rollAccordionBody"
-            hidden>
-
-
-            <div class="roll-list" id="rollList">
-
-                <!-- Rows injected by JavaScript -->
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- EMPTY STATE -->
-
-    <div
-        class="roll-empty"
-        id="rollEmpty"
-        hidden>
-
-        No student found for this search.
-
-    </div>
-
-
-
-    <!-- INFO -->
-
-    <div class="info-box">
-
-        Search by <strong>Class Roll</strong>,
-        <strong>Exam Roll</strong> or <strong>Name</strong>.
-        Tap a result to expand the full list.
-
-    </div>
-
-
-</section>
-
-
-
-<!-- ================= ROLL DIRECTORY STYLES ================= -->
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* ================= SEARCH BOX ================= */
 
-.roll-search-wrap {
-
-    margin-top: 15px;
+* {
+    box-sizing: border-box;
 }
 
 
-.roll-search {
+html {
+    -webkit-text-size-adjust: 100%;
+}
 
-    width: 100%;
 
-    padding: 13px 15px;
+body {
 
-    border-radius: 13px;
+    margin: 0;
 
-    border:
-        1px solid rgba(255,255,255,.16);
-
-    background:
-        rgba(0,0,0,.18);
-
-    color: #fff;
+    min-height: 100vh;
+    min-height: 100svh;
 
     font-family: 'Poppins', sans-serif;
 
-    font-size: 13px;
-
-    outline: none;
-
-    transition:
-        border-color .2s,
-        background .2s,
-        box-shadow .2s;
-}
-
-
-.roll-search::placeholder {
-
-    color: #9fb2b7;
-}
-
-
-.roll-search:focus {
-
-    border-color:
-        rgba(255,255,255,.4);
-
-    background:
-        rgba(0,0,0,.25);
-
-    box-shadow:
-        0 0 0 3px rgba(255,255,255,.07);
-}
-
-
-
-/* ================= RESULTS COUNT ================= */
-
-.roll-results-count {
-
-    margin: 10px 2px 0;
-
-    color: #aebfc3;
-
-    font-size: 10px;
-
-    letter-spacing: .3px;
-}
-
-
-
-/* ================= ACCORDION ================= */
-
-.roll-accordion {
-
-    margin-top: 13px;
-
-    border-radius: 13px;
-
-    overflow: hidden;
-
-    border:
-        1px solid rgba(255,255,255,.1);
-
-    background:
-        rgba(0,0,0,.13);
-}
-
-
-.roll-accordion-toggle {
-
-    width: 100%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 10px;
-
-    padding: 13px 15px;
-
-    border: none;
-
-    background:
-        rgba(255,255,255,.04);
-
     color: #fff;
 
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    text-align: left;
-
-    transition:
-        background .2s;
-}
-
-
-.roll-accordion-toggle:hover {
-
     background:
-        rgba(255,255,255,.08);
+        linear-gradient(
+            135deg,
+            #0f2027,
+            #203a43,
+            #2c5364
+        );
 }
 
 
-.roll-toggle-icon {
+/* ================= PAGE ================= */
+
+.page {
+
+    width: min(100%, 850px);
+
+    margin: auto;
+
+    padding:
+        max(20px, env(safe-area-inset-top))
+        15px
+        max(30px, env(safe-area-inset-bottom));
+}
+
+
+/* ================= HEADER ================= */
+
+.hero {
+
+    text-align: center;
+
+    padding: 12px 0 20px;
+}
+
+
+.badge {
 
     display: inline-block;
 
-    margin-right: 7px;
+    padding: 5px 13px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    background:
+        rgba(255,255,255,.08);
 
     font-size: 11px;
 
+    letter-spacing: 2px;
+}
+
+
+h1 {
+
+    margin: 10px 0 3px;
+
+    font-size:
+        clamp(1.6rem, 7vw, 2.7rem);
+
+    line-height: 1.2;
+}
+
+
+.subtitle {
+
+    margin: 0;
+
+    color: #cbd7db;
+
+    font-size: 13px;
+}
+
+
+/* ================= COMMON CARD ================= */
+
+.card {
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    background:
+        rgba(255,255,255,.075);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.2);
+}
+
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-card {
+
+    padding: 22px 12px;
+
+    text-align: center;
+}
+
+
+.eyebrow {
+
+    margin: 0 0 5px;
+
     color: #b9cbd0;
 
-    transition:
-        transform .25s ease;
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
 }
 
 
-.roll-accordion-toggle[aria-expanded="true"]
-.roll-toggle-icon {
+.countdown-card h2 {
 
-    transform: rotate(90deg);
+    margin: 0;
+
+    font-size:
+        clamp(18px, 5vw, 24px);
+
+    line-height: 1.35;
 }
 
 
-.roll-toggle-count {
+.event-date {
 
-    padding: 3px 10px;
+    margin: 5px 0 17px;
+
+    color: #d4dfe2;
+
+    font-size: 12px;
+}
+
+
+/* ================= TIMER ================= */
+
+.timer {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 7px;
+
+    max-width: 570px;
+
+    margin: auto;
+}
+
+
+.time-box {
+
+    padding: 13px 4px 10px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,.1);
+}
+
+
+.time-box span {
+
+    display: block;
+
+    font-size:
+        clamp(22px, 8vw, 38px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    font-variant-numeric:
+        tabular-nums;
+}
+
+
+.time-box small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #cbd5d8;
+
+    font-size: 10px;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+
+    margin-top: 18px;
+
+    padding: 19px 14px;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    gap: 10px;
+}
+
+
+.section-title h2 {
+
+    margin: 0;
+
+    font-size: 19px;
+}
+
+
+.time-pill {
+
+    white-space: nowrap;
+
+    padding: 6px 9px;
 
     border-radius: 50px;
 
@@ -297,91 +285,44 @@
     color: #d6e0e3;
 
     font-size: 10px;
-
-    font-weight: 500;
-
-    white-space: nowrap;
 }
 
 
+/* ================= EXAM SCHEDULE ================= */
 
-/* ================= ACCORDION BODY ================= */
-
-.roll-accordion-body {
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
-
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition:
-        max-height .35s ease;
-}
-
-
-.roll-accordion-body.is-open {
-
-    max-height: 1200px;
-
-    overflow-y: auto;
-}
-
-
-
-/* ================= ROLL LIST ================= */
-
-.roll-list {
+.schedule-list {
 
     display: grid;
 
-    gap: 6px;
+    gap: 8px;
 
-    padding: 10px;
+    margin-top: 14px;
 }
 
 
-.roll-row {
+.schedule-row {
 
     display: grid;
 
     grid-template-columns:
         70px 1fr;
 
-    gap: 11px;
+    gap: 12px;
 
     align-items: center;
 
-    padding: 10px 11px;
+    padding: 11px;
 
-    border-radius: 11px;
+    border-radius: 13px;
 
     background:
-        rgba(0,0,0,.15);
-
-    border:
-        1px solid rgba(255,255,255,.05);
-
-    transition:
-        background .2s,
-        border-color .2s;
+        rgba(0,0,0,.13);
 }
 
 
-.roll-row:hover {
+.date {
 
-    background:
-        rgba(255,255,255,.06);
-
-    border-color:
-        rgba(255,255,255,.14);
-}
-
-
-.roll-exam {
-
-    min-height: 52px;
+    min-height: 60px;
 
     display: flex;
 
@@ -391,53 +332,42 @@
 
     justify-content: center;
 
-    border-radius: 9px;
+    border-radius: 10px;
 
     background:
         rgba(255,255,255,.08);
-
-    text-align: center;
 }
 
 
-.roll-exam strong {
+.date strong {
 
-    font-size: 15px;
+    font-size: 20px;
 
     line-height: 1;
-
-    font-variant-numeric:
-        tabular-nums;
 }
 
 
-.roll-exam span {
+.date span {
 
     margin-top: 4px;
 
     color: #c5d0d3;
 
-    font-size: 7px;
-
-    letter-spacing: .5px;
+    font-size: 8px;
 }
 
 
-.roll-info h3 {
+.schedule-row h3 {
 
     margin: 0;
 
-    font-size: 12px;
+    font-size: 13px;
 
     line-height: 1.35;
-
-    font-weight: 600;
-
-    word-break: break-word;
 }
 
 
-.roll-info p {
+.schedule-row p {
 
     margin: 3px 0 0;
 
@@ -447,455 +377,881 @@
 }
 
 
-.roll-info p strong {
+/* ================= PRACTICAL ================= */
 
-    color: #d6e0e3;
-
-    font-weight: 600;
-}
-
-
-
-/* ================= HIGHLIGHT MATCH ================= */
-
-.roll-highlight {
-
-    background:
-        rgba(255, 214, 102, .18);
-
-    border-radius: 3px;
-
-    padding: 0 2px;
-
-    color: #ffe7a3;
-}
-
-
-
-/* ================= EMPTY STATE ================= */
-
-.roll-empty {
-
-    margin-top: 12px;
-
-    padding: 16px;
-
-    border-radius: 12px;
-
-    background:
-        rgba(0,0,0,.16);
-
-    border:
-        1px dashed rgba(255,255,255,.15);
+.practical-card {
 
     text-align: center;
+}
 
-    color: #aebfc3;
+
+.practical-card h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+.practical-description {
+
+    margin: 5px 0 16px;
+
+    color: #c3d0d4;
 
     font-size: 11px;
 }
 
 
+.practical-date {
 
-/* ================= SMALL SCREEN TWEAK ================= */
+    display: inline-flex;
 
-@media (max-width: 380px) {
+    flex-direction: column;
 
-    .roll-row {
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 150px;
+
+    padding: 16px 22px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,.09);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+}
+
+
+.practical-date strong {
+
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+.practical-date span {
+
+    margin-top: 6px;
+
+    color: #cbd7da;
+
+    font-size: 11px;
+}
+
+
+/* ================= INFO ================= */
+
+.info-box {
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(0,0,0,.13);
+
+    color: #c7d3d6;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 24px;
+
+    color: #94a5aa;
+
+    font-size: 9px;
+}
+
+
+/* ================= LARGER SCREENS ================= */
+
+@media (min-width: 600px) {
+
+    .page {
+
+        padding-left: 24px;
+
+        padding-right: 24px;
+    }
+
+
+    .section {
+
+        padding: 22px;
+    }
+
+
+    .countdown-card {
+
+        padding:
+            28px 20px 22px;
+    }
+
+
+    .schedule-row {
 
         grid-template-columns:
-            62px 1fr;
+            82px 1fr;
 
-        gap: 9px;
-    }
-
-
-    .roll-exam strong {
-
-        font-size: 13px;
-    }
-
-
-    .roll-info h3 {
-
-        font-size: 11px;
+        padding: 13px;
     }
 
 }
 
-
 </style>
 
+</head>
 
 
-<!-- ================= ROLL DIRECTORY SCRIPT ================= -->
+<body>
+
+
+<main class="page">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="hero">
+
+        <div class="badge">
+            PROFESSIONAL EXAMINATION
+        </div>
+
+
+        <h1>
+            3RD PROFESSIONAL MBBS
+        </h1>
+
+
+        <p class="subtitle">
+            November 2026 • New Curriculum
+        </p>
+
+    </header>
+
+
+
+    <!-- ================= COUNTDOWN ================= -->
+
+    <section class="card countdown-card">
+
+
+        <p class="eyebrow">
+            NEXT EXAMINATION
+        </p>
+
+
+        <h2 id="nextEvent">
+            Loading...
+        </h2>
+
+
+        <p id="nextDate"
+           class="event-date">
+        </p>
+
+
+        <div class="timer">
+
+
+            <div class="time-box">
+
+                <span id="days">
+                    00
+                </span>
+
+                <small>
+                    Days
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="hours">
+                    00
+                </span>
+
+                <small>
+                    Hours
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="minutes">
+                    00
+                </span>
+
+                <small>
+                    Min
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="seconds">
+                    00
+                </span>
+
+                <small>
+                    Sec
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WRITTEN EXAM ================= -->
+
+    <section class="card section">
+
+
+        <div class="section-title">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    WRITTEN EXAMINATION
+                </p>
+
+                <h2>
+                    Examination Schedule
+                </h2>
+
+            </div>
+
+
+            <span class="time-pill">
+                November 2026
+            </span>
+
+
+        </div>
+
+
+
+        <div class="schedule-list">
+
+
+            <!-- 05 NOVEMBER -->
+
+            <article class="schedule-row">
+
+
+                <div class="date">
+
+                    <strong>
+                        05
+                    </strong>
+
+                    <span>
+                        NOV 2026
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Community Medicine &amp;
+                        Public Health
+                    </h3>
+
+                    <p>
+                        Thursday • Written Examination
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 12 NOVEMBER -->
+
+            <article class="schedule-row">
+
+
+                <div class="date">
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <span>
+                        NOV 2026
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Pathology
+                    </h3>
+
+                    <p>
+                        Thursday • Written Examination
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- 16 NOVEMBER -->
+
+            <article class="schedule-row">
+
+
+                <div class="date">
+
+                    <strong>
+                        16
+                    </strong>
+
+                    <span>
+                        NOV 2026
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Microbiology
+                    </h3>
+
+                    <p>
+                        Monday • Written Examination
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ORAL & PRACTICAL ================= -->
+
+    <section class="card section practical-card">
+
+
+        <p class="eyebrow">
+            ORAL &amp; PRACTICAL
+        </p>
+
+
+        <h2>
+            Oral &amp; Practical Examination
+        </h2>
+
+
+        <p class="practical-description">
+            Commencing date
+        </p>
+
+
+        <div class="practical-date">
+
+            <strong>
+                22
+            </strong>
+
+            <span>
+                NOVEMBER 2026
+            </span>
+
+        </div>
+
+
+        <div class="info-box">
+
+            Oral &amp; Practical Examination
+            will commence from
+            <strong>
+                22 November 2026
+            </strong>.
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= EXAM INFORMATION ================= -->
+
+    <section class="card section">
+
+
+        <div class="section-title">
+
+            <div>
+
+                <p class="eyebrow">
+                    THIRD PROFESSIONAL
+                </p>
+
+                <h2>
+                    Examination Subjects
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="schedule-list">
+
+
+            <article class="schedule-row">
+
+                <div class="date">
+
+                    <strong>
+                        01
+                    </strong>
+
+                    <span>
+                        SUBJECT
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Community Medicine &amp;
+                        Public Health
+                    </h3>
+
+                    <p>
+                        Written • Oral • Practical
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="schedule-row">
+
+                <div class="date">
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        SUBJECT
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Pathology
+                    </h3>
+
+                    <p>
+                        Written • Oral • Practical
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="schedule-row">
+
+                <div class="date">
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <span>
+                        SUBJECT
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Microbiology
+                    </h3>
+
+                    <p>
+                        Written • Oral • Practical
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Third Professional MBBS Examination
+
+    </footer>
+
+
+</main>
+
+
 
 <script>
 
 
 /* =====================================================
-   STUDENT DATA
+   EXAMINATION EVENTS
    ===================================================== */
 
-const students = [
+const events = [
 
-    { exam: 5618, name: "Shihor Paul", classRoll: 76 },
-    { exam: 5619, name: "Nafis Kabir", classRoll: 82 },
-    { exam: 5620, name: "M. Latifur Rahman", classRoll: 18 },
-    { exam: 5621, name: "Mossa. Ferdowsi Akter", classRoll: 97 },
-    { exam: 5622, name: "JASSIA AFROZ SUMAIYA", classRoll: 12 },
-    { exam: 5623, name: "Shabrina Mahmud Shahrin", classRoll: 93 },
-    { exam: 5624, name: "Md. Nayeem Bhuiyan", classRoll: 70 },
-    { exam: 5625, name: "Md. Mehedi Hasan Munna", classRoll: 69 },
-    { exam: 5626, name: "Farhan Mostafiz", classRoll: 72 },
-    { exam: 5627, name: "NAIMUL ISLAM SALMAN", classRoll: 45 },
-    { exam: 5628, name: "DEAMUM MUKTAREF SHRESTHO", classRoll: 1 },
-    { exam: 5629, name: "Abu Tayab Mumen", classRoll: 14 },
-    { exam: 5630, name: "MD.Tawseef Hasan", classRoll: 10 },
-    { exam: 5631, name: "Amrin Ahmed", classRoll: 91 },
-    { exam: 5632, name: "Monzur E Mowla Akash", classRoll: 100 },
-    { exam: 5633, name: "Reya Mitra", classRoll: 57 },
-    { exam: 5634, name: "Bissanath Debnath", classRoll: 58 },
-    { exam: 5635, name: "Ridita Paul", classRoll: 11 },
-    { exam: 5636, name: "Fariha Tasneem", classRoll: 90 },
-    { exam: 5637, name: "Tangin Akhter Marena", classRoll: 21 },
-    { exam: 5638, name: "MD. ABRAR TAZWARUL ISLAM", classRoll: 17 },
-    { exam: 5639, name: "Jurain Mahmud Jureen", classRoll: 7 },
-    { exam: 5640, name: "Nusrat Mehzabeen Sumara", classRoll: 8 },
-    { exam: 5641, name: "Syeda Anarmika Rahman", classRoll: 2 },
-    { exam: 5642, name: "Hasnin Mushtari", classRoll: 88 },
-    { exam: 5643, name: "Sumaiya Akter", classRoll: 75 },
-    { exam: 5644, name: "ABU SOUAD SHAMSUDDUHA", classRoll: 76 },
-    { exam: 5645, name: "Md.Sadikul Islam Shihab", classRoll: 71 },
-    { exam: 5646, name: "Iqra Mehjabin", classRoll: 74 },
-    { exam: 5647, name: "Paromita Dutta", classRoll: 9 },
-    { exam: 5648, name: "SHAHRIAR ZIDAN ZARIF", classRoll: 53 },
-    { exam: 5649, name: "Anindita Bhowmick", classRoll: 3 },
-    { exam: 5650, name: "Sumiya Binte Reza", classRoll: 15 },
-    { exam: 5651, name: "Debi rani das", classRoll: 86 },
-    { exam: 5652, name: "Hride Das", classRoll: 27 },
-    { exam: 5653, name: "Sanjana Ahmed Promi", classRoll: 33 },
-    { exam: 5654, name: "Taosif Ahasan Zisan", classRoll: 66 },
-    { exam: 5655, name: "Tashnia Kabir Obantee", classRoll: 62 },
-    { exam: 5656, name: "ANIKA TAFSIN MOHIMA", classRoll: 22 },
-    { exam: 5657, name: "Abdullah Al Munim", classRoll: 68 },
-    { exam: 5658, name: "Kazi Fiaz Hassan", classRoll: 32 },
-    { exam: 5659, name: "Md. Mahmudul Hasan Joy", classRoll: 88 },
-    { exam: 5660, name: "Hosne jannat Maisha", classRoll: 63 },
-    { exam: 5661, name: "Rubina Azad", classRoll: 52 },
-    { exam: 5662, name: "Md Rahatul Islam", classRoll: 73 },
-    { exam: 5663, name: "Sahanima Bhuiyan Simi", classRoll: 61 },
-    { exam: 5664, name: "MD. Amit Hasan Prio", classRoll: 60 },
-    { exam: 5665, name: "AISHA", classRoll: 41 },
-    { exam: 5666, name: "Nurjahan Akter Laboni", classRoll: 42 },
-    { exam: 5667, name: "Mymona siddiqua", classRoll: 25 },
-    { exam: 5668, name: "Hafiz Al Asad", classRoll: 87 },
-    { exam: 5669, name: "Tasnim Akter Fayika", classRoll: 44 },
-    { exam: 5670, name: "Samia Kabir", classRoll: 36 },
-    { exam: 5671, name: "Rubaiya Rahman", classRoll: 59 },
-    { exam: 5672, name: "Sadia Islam Mim", classRoll: 73 },
-    { exam: 5673, name: "Mst Lamisa Rahman", classRoll: 90 },
-    { exam: 5674, name: "NYEMA BINTE ALAM", classRoll: 64 },
-    { exam: 5675, name: "Sumaya Sultana Tajbin", classRoll: 54 },
-    { exam: 5676, name: "Mst. Maria Sarker", classRoll: 67 },
-    { exam: 5677, name: "Maidah Sultana", classRoll: 65 },
-    { exam: 5678, name: "Fariza Ruhaniath Momo", classRoll: 95 },
-    { exam: 5679, name: "Nurush Safi Khan", classRoll: 16 },
-    { exam: 5680, name: "MD.Shaifullah Rafid", classRoll: 34 },
-    { exam: 5681, name: "Tanbir Alam", classRoll: 37 },
-    { exam: 5682, name: "Faria Noor", classRoll: 26 },
-    { exam: 5683, name: "Md.Arafat Hossen Sojib", classRoll: 46 },
-    { exam: 5684, name: "Sabrina Sadiya", classRoll: 43 },
-    { exam: 5685, name: "Md. Shahidul Islam Fuad", classRoll: 79 },
-    { exam: 5686, name: "JANNATUN NAIMA", classRoll: 78 },
-    { exam: 5687, name: "Shekh Maria Sultana", classRoll: 31 },
-    { exam: 5688, name: "Mst.Maesha Afrin", classRoll: 28 },
-    { exam: 5689, name: "SHOFEULLAH RAIHAN", classRoll: 82 },
-    { exam: 5690, name: "Md.Aljariat Zisan", classRoll: 92 },
-    { exam: 5691, name: "Sanjida Khanam Satu", classRoll: 20 },
-    { exam: 5692, name: "Towhseda Mostafa Jawya", classRoll: 19 },
-    { exam: 5693, name: "Sadika Mahmuda", classRoll: 29 },
-    { exam: 5694, name: "Pranto Roy", classRoll: 80 },
-    { exam: 5695, name: "Afia Rahman Siddika", classRoll: 5 },
-    { exam: 5696, name: "Shamima Yeasmin surnona", classRoll: 13 },
-    { exam: 5697, name: "Sabiha Akter Eva", classRoll: 83 },
-    { exam: 5698, name: "Jannatul Ferdous Warsee", classRoll: 49 },
-    { exam: 5699, name: "MASHTURA HAQUE ODRI", classRoll: 24 },
-    { exam: 5700, name: "Dilruba Yasmin", classRoll: 74 },
-    { exam: 5701, name: "Arif Ahmed Emon", classRoll: 31 },
-    { exam: 5702, name: "Syed Mahin Alam", classRoll: 30 },
-    { exam: 5703, name: "Md.Asifuzzaman", classRoll: 102 }
+    {
+        date: "2026-11-05T10:00:00",
+        title: "Community Medicine & Public Health",
+        type: "Written Examination"
+    },
+
+
+    {
+        date: "2026-11-12T10:00:00",
+        title: "Pathology",
+        type: "Written Examination"
+    },
+
+
+    {
+        date: "2026-11-16T10:00:00",
+        title: "Microbiology",
+        type: "Written Examination"
+    },
+
+
+    {
+        date: "2026-11-22T09:00:00",
+        title: "Oral & Practical Examination",
+        type: "Professional Examination"
+    }
 
 ];
 
 
 
 /* =====================================================
-   HELPERS
+   DATE FORMAT
    ===================================================== */
 
-const $ = (id) => document.getElementById(id);
+function formatDate(date) {
 
-const pad2 = (n) => String(n).padStart(2, "0");
+    return date.toLocaleDateString(
 
+        "en-GB",
 
+        {
 
-function escapeHtml(str) {
+            weekday: "long",
 
-    return String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+            day: "2-digit",
+
+            month: "long",
+
+            year: "numeric"
+
+        }
+
+    );
 
 }
 
 
 
 /* =====================================================
-   BUILD ROW
+   COUNTDOWN
    ===================================================== */
 
-function buildRow(student) {
-
-    return `
-        <article class="roll-row">
-
-            <div class="roll-exam">
-
-                <strong>${student.exam}</strong>
-
-                <span>EXAM ROLL</span>
-
-            </div>
-
-            <div class="roll-info">
-
-                <h3>${escapeHtml(student.name)}</h3>
-
-                <p>
-                    Class Roll:
-                    <strong>${pad2(student.classRoll)}</strong>
-                </p>
-
-            </div>
-
-        </article>
-    `;
-
-}
+function updateCountdown() {
 
 
-
-/* =====================================================
-   RENDER LIST
-   ===================================================== */
-
-function renderList(list) {
-
-    const rollList = $("rollList");
-
-    const empty = $("rollEmpty");
-
-    const countLabel = $("rollResultsCount");
-
-    const toggleCount = $("rollToggleCount");
+    const now =
+        new Date();
 
 
-    if (list.length === 0) {
+    /* Find next examination */
 
-        rollList.innerHTML = "";
+    const next =
+        events.find(
 
-        empty.hidden = false;
-
-        countLabel.textContent = "No matching student found";
-
-        toggleCount.textContent = "0";
-
-        return;
-
-    }
-
-
-    empty.hidden = true;
-
-    rollList.innerHTML =
-        list.map(buildRow).join("");
-
-
-    countLabel.textContent =
-        `Showing ${list.length} of ${students.length} students`;
-
-    toggleCount.textContent = list.length;
-
-}
-
-
-
-/* =====================================================
-   SEARCH
-   ===================================================== */
-
-function runSearch(query) {
-
-    const q = query.trim().toLowerCase();
-
-
-    if (!q) {
-
-        renderList(students);
-
-        return;
-
-    }
-
-
-    const filtered = students.filter((s) => {
-
-        return (
-
-            String(s.classRoll).includes(q) ||
-
-            String(s.exam).includes(q) ||
-
-            s.name.toLowerCase().includes(q)
+            event =>
+                new Date(event.date) > now
 
         );
 
-    });
 
 
-    renderList(filtered);
+    /* =================================================
+       ALL EXAMS COMPLETED
+       ================================================= */
+
+    if (!next) {
 
 
+        document
+            .getElementById("nextEvent")
+            .textContent =
+                "All examinations completed";
 
-    /* Auto-open accordion when searching */
 
-    if (filtered.length > 0) {
+        document
+            .getElementById("nextDate")
+            .textContent =
+                "Congratulations!";
 
-        openAccordion();
+
+        document
+            .querySelector(".timer")
+            .innerHTML = `
+
+                <div
+                    class="time-box"
+                    style="grid-column:1/-1">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <small>
+                        Completed
+                    </small>
+
+                </div>
+
+            `;
+
+
+        return;
 
     }
 
+
+
+    /* =================================================
+       TARGET
+       ================================================= */
+
+    const target =
+        new Date(next.date);
+
+
+    const gap =
+        target - now;
+
+
+
+    /* =================================================
+       EVENT TITLE
+       ================================================= */
+
+    document
+        .getElementById("nextEvent")
+        .textContent =
+            `${next.title} — ${next.type}`;
+
+
+
+    /* =================================================
+       EVENT DATE
+       ================================================= */
+
+    document
+        .getElementById("nextDate")
+        .textContent =
+
+            `${formatDate(target)} • ${
+                target.toLocaleTimeString(
+                    [],
+                    {
+                        hour: "2-digit",
+                        minute: "2-digit"
+                    }
+                )
+            }`;
+
+
+
+    /* =================================================
+       TIME CALCULATION
+       ================================================= */
+
+    const totalSeconds =
+
+        Math.max(
+
+            0,
+
+            Math.floor(
+                gap / 1000
+            )
+
+        );
+
+
+
+    const days =
+
+        Math.floor(
+            totalSeconds / 86400
+        );
+
+
+
+    const hours =
+
+        Math.floor(
+
+            (totalSeconds % 86400)
+            / 3600
+
+        );
+
+
+
+    const minutes =
+
+        Math.floor(
+
+            (totalSeconds % 3600)
+            / 60
+
+        );
+
+
+
+    const seconds =
+
+        totalSeconds % 60;
+
+
+
+    /* =================================================
+       DISPLAY
+       ================================================= */
+
+    document
+        .getElementById("days")
+        .textContent =
+
+            String(days)
+                .padStart(2, "0");
+
+
+    document
+        .getElementById("hours")
+        .textContent =
+
+            String(hours)
+                .padStart(2, "0");
+
+
+    document
+        .getElementById("minutes")
+        .textContent =
+
+            String(minutes)
+                .padStart(2, "0");
+
+
+    document
+        .getElementById("seconds")
+        .textContent =
+
+            String(seconds)
+                .padStart(2, "0");
+
 }
 
 
 
 /* =====================================================
-   ACCORDION
+   START COUNTDOWN
    ===================================================== */
 
-function openAccordion() {
-
-    const body = $("rollAccordionBody");
-
-    const toggle = $("rollToggle");
-
-    body.hidden = false;
-
-    /* allow layout before class */
-
-    requestAnimationFrame(() => {
-
-        body.classList.add("is-open");
-
-    });
-
-    toggle.setAttribute("aria-expanded", "true");
-
-    toggle.querySelector(".roll-toggle-icon").textContent = "▾";
-
-    toggle.firstElementChild.lastChild.textContent = " Hide All Students";
-
-}
+updateCountdown();
 
 
+setInterval(
 
-function closeAccordion() {
+    updateCountdown,
 
-    const body = $("rollAccordionBody");
+    1000
 
-    const toggle = $("rollToggle");
-
-    body.classList.remove("is-open");
-
-    toggle.setAttribute("aria-expanded", "false");
-
-    toggle.querySelector(".roll-toggle-icon").textContent = "▸";
-
-    toggle.firstElementChild.lastChild.textContent = " View All Students";
-
-    setTimeout(() => {
-
-        if (!body.classList.contains("is-open")) {
-
-            body.hidden = true;
-
-        }
-
-    }, 350);
-
-}
-
-
-
-function toggleAccordion() {
-
-    const toggle = $("rollToggle");
-
-    const isOpen = toggle.getAttribute("aria-expanded") === "true";
-
-    isOpen ? closeAccordion() : openAccordion();
-
-}
-
-
-
-/* =====================================================
-   INIT
-   ===================================================== */
-
-(function initRollDirectory() {
-
-    if (!document.getElementById("rollDirectory")) return;
-
-
-    renderList(students);
-
-
-    $("rollToggle").addEventListener("click", toggleAccordion);
-
-
-    let searchTimer = null;
-
-    $("rollSearch").addEventListener("input", (e) => {
-
-        const value = e.target.value;
-
-        clearTimeout(searchTimer);
-
-        searchTimer = setTimeout(() => runSearch(value), 120);
-
-    });
-
-
-    /* Enter key opens results */
-
-    $("rollSearch").addEventListener("keydown", (e) => {
-
-        if (e.key === "Enter") {
-
-            e.preventDefault();
-
-            runSearch(e.target.value);
-
-        }
-
-    });
-
-
-})();
-
+);
 
 </script>
+
+
+</body>
+
+</html>
