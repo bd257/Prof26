@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +13,7 @@
       content="#0f2027">
 
 <title>Third Professional MBBS Examination</title>
+
 <link rel="icon" type="image/png" href="1.png">
 
 
@@ -533,7 +535,7 @@ footer {
     <header class="hero">
 
         <div class="badge">
-            PROFESSIONAL EXAMINATION
+            PROFESSIONAL VIVA EXAMINATION
         </div>
 
 
@@ -543,20 +545,20 @@ footer {
 
 
         <p class="subtitle">
-            November 2026 • New Curriculum
+            November – December 2026 • New Curriculum
         </p>
 
     </header>
 
 
 
-    <!-- ================= COUNTDOWN ================= -->
+    <!-- ================= MAIN COUNTDOWN ================= -->
 
     <section class="card countdown-card">
 
 
-        <p class="eyebrow">
-            NEXT EXAMINATION
+        <p class="eyebrow" id="countdownLabel">
+            NEXT UPCOMING VIVA
         </p>
 
 
@@ -565,8 +567,7 @@ footer {
         </h2>
 
 
-        <p id="nextDate"
-           class="event-date">
+        <p id="nextDate" class="event-date">
         </p>
 
 
@@ -575,52 +576,36 @@ footer {
 
             <div class="time-box">
 
-                <span id="days">
-                    00
-                </span>
+                <span id="days">00</span>
 
-                <small>
-                    Days
-                </small>
+                <small>Days</small>
 
             </div>
 
 
             <div class="time-box">
 
-                <span id="hours">
-                    00
-                </span>
+                <span id="hours">00</span>
 
-                <small>
-                    Hours
-                </small>
+                <small>Hours</small>
 
             </div>
 
 
             <div class="time-box">
 
-                <span id="minutes">
-                    00
-                </span>
+                <span id="minutes">00</span>
 
-                <small>
-                    Min
-                </small>
+                <small>Min</small>
 
             </div>
 
 
             <div class="time-box">
 
-                <span id="seconds">
-                    00
-                </span>
+                <span id="seconds">00</span>
 
-                <small>
-                    Sec
-                </small>
+                <small>Sec</small>
 
             </div>
 
@@ -631,7 +616,139 @@ footer {
 
 
 
-    <!-- ================= WRITTEN EXAM ================= -->
+    <!-- ================= ROLL NUMBER SEARCH ================= -->
+
+    <section class="card section">
+
+
+        <div class="section-title">
+
+            <div>
+
+                <p class="eyebrow">
+                    INDIVIDUAL EXAMINATION DETAILS
+                </p>
+
+                <h2>
+                    Find Your Viva Schedule
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <p style="
+            color:#cbd7db;
+            font-size:11px;
+            margin:10px 0 12px;
+            line-height:1.6;
+        ">
+
+            Enter your roll number to find your individual
+            Community Medicine, Microbiology and Pathology
+            viva examination dates.
+
+        </p>
+
+
+
+        <!-- ROLL INPUT -->
+
+        <div style="
+            display:grid;
+            grid-template-columns:minmax(0,1fr) auto;
+            gap:8px;
+            align-items:stretch;
+        ">
+
+
+            <input
+
+                type="text"
+
+                id="rollInput"
+
+                inputmode="numeric"
+
+                autocomplete="off"
+
+                placeholder="Enter your roll number"
+
+                aria-label="Enter your roll number"
+
+                style="
+                    width:100%;
+                    min-width:0;
+                    padding:12px;
+                    border-radius:12px;
+                    border:1px solid rgba(255,255,255,.2);
+                    background:rgba(255,255,255,.1);
+                    color:white;
+                    font-family:inherit;
+                    font-size:13px;
+                    outline:none;
+                "
+
+            >
+
+
+
+            <button
+
+                type="button"
+
+                id="searchButton"
+
+                style="
+                    padding:10px 17px;
+                    border:1px solid rgba(255,255,255,.2);
+                    border-radius:12px;
+                    background:rgba(255,255,255,.16);
+                    color:white;
+                    font-family:inherit;
+                    font-size:12px;
+                    font-weight:600;
+                    cursor:pointer;
+                "
+
+            >
+
+                SEARCH
+
+            </button>
+
+
+        </div>
+
+
+
+        <p id="searchMessage" style="
+            font-size:11px;
+            color:#cbd7db;
+            margin:12px 0 0;
+            line-height:1.6;
+        "></p>
+
+
+
+        <!-- INDIVIDUAL RESULTS -->
+
+        <div
+            id="personalResults"
+            class="schedule-list"
+            style="display:none;"
+        >
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= VIVA ROUTINE ================= -->
 
     <section class="card section">
 
@@ -642,18 +759,18 @@ footer {
             <div>
 
                 <p class="eyebrow">
-                    WRITTEN EXAMINATION
+                    ORAL EXAMINATION
                 </p>
 
                 <h2>
-                    Examination Schedule
+                    Viva Examination Routine
                 </h2>
 
             </div>
 
 
             <span class="time-pill">
-                November 2026
+                08 AM – 03 PM
             </span>
 
 
@@ -661,287 +778,159 @@ footer {
 
 
 
-        <div class="schedule-list">
+        <!-- ================= FILTERS ================= -->
 
+        <div style="
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+            gap:9px;
+            margin-top:17px;
+        ">
 
-            <!-- 05 NOVEMBER -->
 
-            <article class="schedule-row">
-
-
-                <div class="date">
-
-                    <strong>
-                        05
-                    </strong>
-
-                    <span>
-                        NOV 2026
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Community Medicine &amp;
-                        Public Health
-                    </h3>
-
-                    <p>
-                        Thursday • Written Examination
-                    </p>
-
-                </div>
-
-
-            </article>
-
-
-
-            <!-- 12 NOVEMBER -->
-
-            <article class="schedule-row">
-
-
-                <div class="date">
-
-                    <strong>
-                        12
-                    </strong>
-
-                    <span>
-                        NOV 2026
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Pathology
-                    </h3>
-
-                    <p>
-                        Thursday • Written Examination
-                    </p>
-
-                </div>
-
-
-            </article>
-
-
-
-            <!-- 16 NOVEMBER -->
-
-            <article class="schedule-row">
-
-
-                <div class="date">
-
-                    <strong>
-                        16
-                    </strong>
-
-                    <span>
-                        NOV 2026
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Microbiology
-                    </h3>
-
-                    <p>
-                        Monday • Written Examination
-                    </p>
-
-                </div>
-
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= ORAL & PRACTICAL ================= -->
-
-    <section class="card section practical-card">
-
-
-        <p class="eyebrow">
-            ORAL &amp; PRACTICAL
-        </p>
-
-
-        <h2>
-            Oral &amp; Practical Examination
-        </h2>
-
-
-        <p class="practical-description">
-            Commencing date
-        </p>
-
-
-        <div class="practical-date">
-
-            <strong>
-                22
-            </strong>
-
-            <span>
-                NOVEMBER 2026
-            </span>
-
-        </div>
-
-
-        <div class="info-box">
-
-            Oral &amp; Practical Examination
-            will commence from
-            <strong>
-                22 November 2026
-            </strong>.
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================= EXAM INFORMATION ================= -->
-
-    <section class="card section">
-
-
-        <div class="section-title">
+            <!-- SUBJECT FILTER -->
 
             <div>
 
-                <p class="eyebrow">
-                    THIRD PROFESSIONAL
-                </p>
+                <label for="subjectFilter" style="
+                    display:block;
+                    margin-bottom:6px;
+                    color:#cbd7db;
+                    font-size:10px;
+                    font-weight:600;
+                ">
 
-                <h2>
-                    Examination Subjects
-                </h2>
+                    Filter by Subject
+
+                </label>
+
+
+                <select
+
+                    id="subjectFilter"
+
+                    style="
+                        width:100%;
+                        padding:11px 8px;
+                        border-radius:11px;
+                        border:1px solid rgba(255,255,255,.15);
+                        background:#203a43;
+                        color:white;
+                        font-family:inherit;
+                        font-size:11px;
+                        outline:none;
+                    "
+
+                >
+
+                    <option value="all">
+                        All Subjects
+                    </option>
+
+                    <option value="Community Medicine">
+                        Community Medicine
+                    </option>
+
+                    <option value="Microbiology">
+                        Microbiology
+                    </option>
+
+                    <option value="Pathology">
+                        Pathology
+                    </option>
+
+                </select>
 
             </div>
 
-        </div>
 
 
-        <div class="schedule-list">
+            <!-- DATE FILTER -->
+
+            <div>
+
+                <label for="dateFilter" style="
+                    display:block;
+                    margin-bottom:6px;
+                    color:#cbd7db;
+                    font-size:10px;
+                    font-weight:600;
+                ">
+
+                    Filter by Date
+
+                </label>
 
 
-            <article class="schedule-row">
+                <select
 
-                <div class="date">
+                    id="dateFilter"
 
-                    <strong>
-                        01
-                    </strong>
+                    style="
+                        width:100%;
+                        padding:11px 8px;
+                        border-radius:11px;
+                        border:1px solid rgba(255,255,255,.15);
+                        background:#203a43;
+                        color:white;
+                        font-family:inherit;
+                        font-size:11px;
+                        outline:none;
+                    "
 
-                    <span>
-                        SUBJECT
-                    </span>
+                >
 
-                </div>
+                    <option value="all">
+                        All Upcoming Dates
+                    </option>
 
+                </select>
 
-                <div>
-
-                    <h3>
-                        Community Medicine &amp;
-                        Public Health
-                    </h3>
-
-                    <p>
-                        Written • Oral • Practical
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="schedule-row">
-
-                <div class="date">
-
-                    <strong>
-                        02
-                    </strong>
-
-                    <span>
-                        SUBJECT
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Pathology
-                    </h3>
-
-                    <p>
-                        Written • Oral • Practical
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="schedule-row">
-
-                <div class="date">
-
-                    <strong>
-                        03
-                    </strong>
-
-                    <span>
-                        SUBJECT
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Microbiology
-                    </h3>
-
-                    <p>
-                        Written • Oral • Practical
-                    </p>
-
-                </div>
-
-            </article>
+            </div>
 
 
         </div>
+
+
+
+        <!-- ================= SCHEDULE LIST ================= -->
+
+        <div
+            class="schedule-list"
+            id="vivaSchedule"
+        >
+
+        </div>
+
+
+
+        <!-- ================= INFORMATION ================= -->
+
+        <div class="info-box">
+
+            <strong>
+                DHAKA COMMUNITY MEDICAL COLLEGE CENTER
+            </strong>
+
+            <br>
+
+            Viva Examination Timing:
+
+            <strong>
+                08:00 AM – 03:00 PM
+            </strong>
+
+            <br>
+
+            All completed examinations will automatically
+            disappear from the routine.
+
+            <br>
+
+            All countdowns follow Bangladesh Standard Time (UTC+6).
+
+        </div>
+
 
     </section>
 
@@ -952,6 +941,10 @@ footer {
     <footer>
 
         © 2026 Third Professional MBBS Examination
+
+        <br>
+
+        Dhaka Community Medical College Center
 
     </footer>
 
@@ -964,36 +957,307 @@ footer {
 
 
 /* =====================================================
-   EXAMINATION EVENTS
+   TIMEZONE
    ===================================================== */
+
+
+const TIME_ZONE = "Asia/Dhaka";
+
+
+
+/* =====================================================
+   EXAMINATION EVENTS
+
+   All dates and times are Bangladesh local time.
+
+   start: 08:00 AM
+   end:   03:00 PM
+
+   rollRanges contains the actual eligible roll numbers.
+   ===================================================== */
+
 
 const events = [
 
+
+    /* ================= COMMUNITY MEDICINE ================= */
+
+
     {
-        date: "2026-11-05T10:00:00",
-        title: "Community Medicine & Public Health",
-        type: "Written Examination"
+        id: "cm-23",
+
+        date: "2026-11-23",
+
+        subject: "Community Medicine",
+
+        rolls: "5618–5631",
+
+        rollRanges: [[5618,5631]]
+
     },
 
 
     {
-        date: "2026-11-12T10:00:00",
-        title: "Pathology",
-        type: "Written Examination"
+        id: "cm-24",
+
+        date: "2026-11-24",
+
+        subject: "Community Medicine",
+
+        rolls: "5632–5645",
+
+        rollRanges: [[5632,5645]]
+
     },
 
 
     {
-        date: "2026-11-16T10:00:00",
-        title: "Microbiology",
-        type: "Written Examination"
+        id: "cm-25",
+
+        date: "2026-11-25",
+
+        subject: "Community Medicine",
+
+        rolls: "5646–5659",
+
+        rollRanges: [[5646,5659]]
+
     },
 
 
     {
-        date: "2026-11-22T09:00:00",
-        title: "Oral & Practical Examination",
-        type: "Professional Examination"
+        id: "cm-26",
+
+        date: "2026-11-26",
+
+        subject: "Community Medicine",
+
+        rolls: "5660–5673",
+
+        rollRanges: [[5660,5673]]
+
+    },
+
+
+    {
+        id: "cm-28",
+
+        date: "2026-11-28",
+
+        subject: "Community Medicine",
+
+        rolls: "5674–5687",
+
+        rollRanges: [[5674,5687]]
+
+    },
+
+
+    {
+        id: "cm-29",
+
+        date: "2026-11-29",
+
+        subject: "Community Medicine",
+
+        rolls: "5688–5699, 7032",
+
+        rollRanges: [
+            [5688,5699],
+            [7032,7032]
+        ]
+
+    },
+
+
+
+    /* ================= MICROBIOLOGY ================= */
+
+
+    {
+        id: "micro-30",
+
+        date: "2026-11-30",
+
+        subject: "Microbiology",
+
+        rolls: "5618–5632",
+
+        rollRanges: [[5618,5632]]
+
+    },
+
+
+    {
+        id: "micro-01",
+
+        date: "2026-12-01",
+
+        subject: "Microbiology",
+
+        rolls: "5633–5647",
+
+        rollRanges: [[5633,5647]]
+
+    },
+
+
+    {
+        id: "micro-02",
+
+        date: "2026-12-02",
+
+        subject: "Microbiology",
+
+        rolls: "5648–5662",
+
+        rollRanges: [[5648,5662]]
+
+    },
+
+
+    {
+        id: "micro-03",
+
+        date: "2026-12-03",
+
+        subject: "Microbiology",
+
+        rolls: "5663–5677",
+
+        rollRanges: [[5663,5677]]
+
+    },
+
+
+
+    /* ================= DECEMBER 5 ================= */
+
+
+    {
+        id: "path-05",
+
+        date: "2026-12-05",
+
+        subject: "Pathology",
+
+        rolls: "5618–5632",
+
+        rollRanges: [[5618,5632]]
+
+    },
+
+
+    {
+        id: "micro-05",
+
+        date: "2026-12-05",
+
+        subject: "Microbiology",
+
+        rolls: "5678–5692",
+
+        rollRanges: [[5678,5692]]
+
+    },
+
+
+
+    /* ================= DECEMBER 6 ================= */
+
+
+    {
+        id: "path-06",
+
+        date: "2026-12-06",
+
+        subject: "Pathology",
+
+        rolls: "5633–5647",
+
+        rollRanges: [[5633,5647]]
+
+    },
+
+
+    {
+        id: "micro-06",
+
+        date: "2026-12-06",
+
+        subject: "Microbiology",
+
+        rolls: "5693–5699, 8231–8236",
+
+        rollRanges: [
+            [5693,5699],
+            [8231,8236]
+        ]
+
+    },
+
+
+
+    /* ================= PATHOLOGY ================= */
+
+
+    {
+        id: "path-07",
+
+        date: "2026-12-07",
+
+        subject: "Pathology",
+
+        rolls: "5648–5662",
+
+        rollRanges: [[5648,5662]]
+
+    },
+
+
+    {
+        id: "path-08",
+
+        date: "2026-12-08",
+
+        subject: "Pathology",
+
+        rolls: "5663–5677",
+
+        rollRanges: [[5663,5677]]
+
+    },
+
+
+    {
+        id: "path-09",
+
+        date: "2026-12-09",
+
+        subject: "Pathology",
+
+        rolls: "5678–5692",
+
+        rollRanges: [[5678,5692]]
+
+    },
+
+
+    {
+        id: "path-10",
+
+        date: "2026-12-10",
+
+        subject: "Pathology",
+
+        rolls: "5693–5703, 8231, 8232, 8234",
+
+        rollRanges: [
+            [5693,5703],
+            [8231,8232],
+            [8234,8234]
+        ]
+
     }
 
 ];
@@ -1001,12 +1265,37 @@ const events = [
 
 
 /* =====================================================
+   DATE AND TIME FUNCTIONS
+   ===================================================== */
+
+
+function getStartDate(event) {
+
+    return new Date(
+        `${event.date}T08:00:00+06:00`
+    );
+
+}
+
+
+function getEndDate(event) {
+
+    return new Date(
+        `${event.date}T15:00:00+06:00`
+    );
+
+}
+
+
+
+/* =====================================================
    DATE FORMAT
    ===================================================== */
 
+
 function formatDate(date) {
 
-    return date.toLocaleDateString(
+    return new Intl.DateTimeFormat(
 
         "en-GB",
 
@@ -1018,9 +1307,114 @@ function formatDate(date) {
 
             month: "long",
 
-            year: "numeric"
+            year: "numeric",
+
+            timeZone: TIME_ZONE
 
         }
+
+    ).format(date);
+
+}
+
+
+
+/* =====================================================
+   DAY FORMAT
+   ===================================================== */
+
+
+function formatDay(date) {
+
+    return new Intl.DateTimeFormat(
+
+        "en-GB",
+
+        {
+
+            day: "2-digit",
+
+            timeZone: TIME_ZONE
+
+        }
+
+    ).format(date);
+
+}
+
+
+
+/* =====================================================
+   MONTH FORMAT
+   ===================================================== */
+
+
+function formatMonth(date) {
+
+    return new Intl.DateTimeFormat(
+
+        "en-GB",
+
+        {
+
+            month: "short",
+
+            year: "numeric",
+
+            timeZone: TIME_ZONE
+
+        }
+
+    ).format(date).toUpperCase();
+
+}
+
+
+
+/* =====================================================
+   TIME FORMAT
+   ===================================================== */
+
+
+function formatTime(date) {
+
+    return new Intl.DateTimeFormat(
+
+        "en-US",
+
+        {
+
+            hour: "2-digit",
+
+            minute: "2-digit",
+
+            hour12: true,
+
+            timeZone: TIME_ZONE
+
+        }
+
+    ).format(date);
+
+}
+
+
+
+/* =====================================================
+   GET VISIBLE EVENTS
+
+   Automatically removes examinations after 03:00 PM.
+   ===================================================== */
+
+
+function getVisibleEvents() {
+
+    const now = new Date();
+
+
+    return events.filter(
+
+        event => getEndDate(event) > now
 
     );
 
@@ -1029,62 +1423,881 @@ function formatDate(date) {
 
 
 /* =====================================================
-   COUNTDOWN
+   COUNTDOWN CALCULATION
    ===================================================== */
 
-function updateCountdown() {
+
+function getTimeParts(milliseconds) {
 
 
-    const now =
-        new Date();
+    const totalSeconds = Math.max(
+
+        0,
+
+        Math.floor(milliseconds / 1000)
+
+    );
 
 
-    /* Find next examination */
+    const days = Math.floor(
 
-    const next =
-        events.find(
+        totalSeconds / 86400
 
-            event =>
-                new Date(event.date) > now
+    );
+
+
+    const hours = Math.floor(
+
+        (totalSeconds % 86400) / 3600
+
+    );
+
+
+    const minutes = Math.floor(
+
+        (totalSeconds % 3600) / 60
+
+    );
+
+
+    const seconds = totalSeconds % 60;
+
+
+    return {
+
+        days,
+
+        hours,
+
+        minutes,
+
+        seconds
+
+    };
+
+}
+
+
+
+/* =====================================================
+   COUNTDOWN FORMAT FOR INDIVIDUAL EXAMS
+   ===================================================== */
+
+
+function formatDuration(milliseconds) {
+
+
+    const time = getTimeParts(milliseconds);
+
+
+    return (
+
+        `${time.days}d ` +
+
+        `${time.hours}h ` +
+
+        `${time.minutes}m ` +
+
+        `${time.seconds}s`
+
+    );
+
+}
+
+
+
+/* =====================================================
+   EVENT STATUS
+   ===================================================== */
+
+
+function getEventStatus(event) {
+
+
+    const now = new Date();
+
+    const start = getStartDate(event);
+
+    const end = getEndDate(event);
+
+
+    if (now < start) {
+
+        return "upcoming";
+
+    }
+
+
+    if (now < end) {
+
+        return "active";
+
+    }
+
+
+    return "completed";
+
+}
+
+
+
+/* =====================================================
+   INDIVIDUAL COUNTDOWN TEXT
+   ===================================================== */
+
+
+function getCountdownText(event) {
+
+
+    const now = new Date();
+
+    const start = getStartDate(event);
+
+    const end = getEndDate(event);
+
+
+    if (now < start) {
+
+
+        return {
+
+            text:
+
+                "Starts in: " +
+
+                formatDuration(start - now),
+
+            className: "row-countdown"
+
+        };
+
+    }
+
+
+
+    if (now < end) {
+
+
+        return {
+
+            text:
+
+                "● IN PROGRESS • Ends in: " +
+
+                formatDuration(end - now),
+
+            className: "row-countdown",
+
+        };
+
+    }
+
+
+
+    return {
+
+        text: "✓ Viva Examination Completed",
+
+        className: "row-countdown"
+
+    };
+
+}
+
+
+
+/* =====================================================
+   CREATE EXAMINATION CARD
+   ===================================================== */
+
+
+function createEventCard(event) {
+
+
+    const date = getStartDate(event);
+
+
+    return `
+
+        <article class="schedule-row">
+
+
+            <div class="date">
+
+
+                <strong>
+
+                    ${formatDay(date)}
+
+                </strong>
+
+
+                <span>
+
+                    ${formatMonth(date)}
+
+                </span>
+
+
+            </div>
+
+
+
+            <div>
+
+
+                <h3>
+
+                    ${event.subject}
+
+                </h3>
+
+
+                <p>
+
+                    ${formatDate(date)}
+
+                </p>
+
+
+                <p>
+
+                    08:00 AM – 03:00 PM
+
+                </p>
+
+
+                <p style="
+                    color:#fff;
+                    font-weight:600;
+                    margin-top:5px;
+                ">
+
+                    Roll No. ${event.rolls}
+
+                </p>
+
+
+                <p
+
+                    class="row-countdown"
+
+                    data-event-id="${event.id}"
+
+                    style="
+                        color:#b9dce4;
+                        font-weight:600;
+                        margin-top:7px;
+                        font-variant-numeric:tabular-nums;
+                    "
+
+                >
+
+                    Loading countdown...
+
+                </p>
+
+
+            </div>
+
+
+        </article>
+
+    `;
+
+}
+
+
+
+/* =====================================================
+   FILTER ELEMENTS
+   ===================================================== */
+
+
+const subjectFilter =
+
+    document.getElementById("subjectFilter");
+
+
+const dateFilter =
+
+    document.getElementById("dateFilter");
+
+
+const vivaSchedule =
+
+    document.getElementById("vivaSchedule");
+
+
+const personalResults =
+
+    document.getElementById("personalResults");
+
+
+const rollInput =
+
+    document.getElementById("rollInput");
+
+
+const searchMessage =
+
+    document.getElementById("searchMessage");
+
+
+
+/* =====================================================
+   POPULATE DATE FILTER
+
+   Only upcoming dates are displayed.
+   ===================================================== */
+
+
+function populateDateFilter() {
+
+
+    const previousValue = dateFilter.value;
+
+
+    const visibleEvents = getVisibleEvents();
+
+
+    const uniqueDates = [
+
+        ...new Set(
+
+            visibleEvents.map(event => event.date)
+
+        )
+
+    ];
+
+
+    dateFilter.innerHTML = `
+
+        <option value="all">
+
+            All Upcoming Dates
+
+        </option>
+
+    `;
+
+
+    uniqueDates.forEach(date => {
+
+
+        const option =
+
+            document.createElement("option");
+
+
+        option.value = date;
+
+
+        option.textContent =
+
+            formatDate(
+
+                getStartDate(
+
+                    {date}
+
+                )
+
+            );
+
+
+        dateFilter.appendChild(option);
+
+    });
+
+
+
+    /* Preserve previous selection if still available */
+
+    if (
+
+        uniqueDates.includes(previousValue)
+
+    ) {
+
+        dateFilter.value = previousValue;
+
+    }
+
+    else {
+
+        dateFilter.value = "all";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   RENDER MAIN VIVA ROUTINE
+   ===================================================== */
+
+
+function renderSchedule() {
+
+
+    const selectedSubject =
+
+        subjectFilter.value;
+
+
+    const selectedDate =
+
+        dateFilter.value;
+
+
+    const visibleEvents =
+
+        getVisibleEvents();
+
+
+
+    const filteredEvents =
+
+        visibleEvents.filter(event => {
+
+
+            const subjectMatch =
+
+                selectedSubject === "all" ||
+
+                event.subject === selectedSubject;
+
+
+            const dateMatch =
+
+                selectedDate === "all" ||
+
+                event.date === selectedDate;
+
+
+            return subjectMatch && dateMatch;
+
+        });
+
+
+
+    /* NO MATCHING EXAMINATION */
+
+    if (filteredEvents.length === 0) {
+
+
+        if (visibleEvents.length === 0) {
+
+
+            vivaSchedule.innerHTML = `
+
+                <div style="
+                    text-align:center;
+                    padding:25px 10px;
+                    color:#cbd7db;
+                    font-size:12px;
+                ">
+
+                    All Viva Examinations Completed.
+
+                    <br>
+
+                    Congratulations!
+
+                </div>
+
+            `;
+
+        }
+
+        else {
+
+
+            vivaSchedule.innerHTML = `
+
+                <div style="
+                    text-align:center;
+                    padding:25px 10px;
+                    color:#cbd7db;
+                    font-size:12px;
+                ">
+
+                    No upcoming viva found for this filter.
+
+                </div>
+
+            `;
+
+        }
+
+
+        return;
+
+    }
+
+
+
+    /* DISPLAY MATCHING EVENTS */
+
+    vivaSchedule.innerHTML =
+
+        filteredEvents.map(
+
+            event => createEventCard(event)
+
+        ).join("");
+
+
+
+    updateIndividualCountdowns();
+
+}
+
+
+
+/* =====================================================
+   ROLL NUMBER MATCHING
+   ===================================================== */
+
+
+function rollMatches(event, roll) {
+
+
+    return event.rollRanges.some(
+
+        range =>
+
+            roll >= range[0] &&
+
+            roll <= range[1]
+
+    );
+
+}
+
+
+
+/* =====================================================
+   INDIVIDUAL ROLL NUMBER SEARCH
+
+   Displays all upcoming subjects for the entered roll.
+   ===================================================== */
+
+
+let lastSearchedRoll = "";
+
+
+
+function searchRoll() {
+
+
+    const rollText =
+
+        rollInput.value.trim();
+
+
+
+    /* VALIDATION */
+
+    if (!/^\d+$/.test(rollText)) {
+
+
+        searchMessage.textContent =
+
+            "Please enter a valid numeric roll number.";
+
+
+        personalResults.style.display = "none";
+
+
+        lastSearchedRoll = "";
+
+
+        return;
+
+    }
+
+
+
+    const roll = Number(rollText);
+
+
+
+    if (!Number.isSafeInteger(roll) || roll <= 0) {
+
+
+        searchMessage.textContent =
+
+            "Please enter a valid roll number.";
+
+
+        personalResults.style.display = "none";
+
+
+        lastSearchedRoll = "";
+
+
+        return;
+
+    }
+
+
+
+    lastSearchedRoll = rollText;
+
+
+
+    /* FIND ALL UPCOMING EXAMS FOR THIS ROLL */
+
+    const matchingEvents =
+
+        getVisibleEvents().filter(
+
+            event => rollMatches(event, roll)
 
         );
 
 
 
-    /* =================================================
-       ALL EXAMS COMPLETED
-       ================================================= */
+    /* NO EXAMINATION FOUND */
 
-    if (!next) {
+    if (matchingEvents.length === 0) {
+
+
+        searchMessage.textContent =
+
+            `No upcoming viva examination found for Roll No. ${roll}.`;
+
+
+        personalResults.style.display = "none";
+
+
+        return;
+
+    }
+
+
+
+    /* SUCCESS MESSAGE */
+
+    searchMessage.textContent =
+
+        `Upcoming viva examinations found for Roll No. ${roll}: ${matchingEvents.length} subject(s).`;
+
+
+
+    /* DISPLAY RESULTS */
+
+    personalResults.style.display = "grid";
+
+
+    personalResults.innerHTML =
+
+        matchingEvents.map(
+
+            event => createEventCard(event)
+
+        ).join("");
+
+
+
+    updateIndividualCountdowns();
+
+}
+
+
+
+/* =====================================================
+   UPDATE ALL INDIVIDUAL COUNTDOWNS
+   ===================================================== */
+
+
+function updateIndividualCountdowns() {
+
+
+    const countdownElements =
+
+        document.querySelectorAll(
+
+            ".row-countdown"
+
+        );
+
+
+
+    countdownElements.forEach(element => {
+
+
+        const eventId =
+
+            element.dataset.eventId;
+
+
+        const event =
+
+            events.find(
+
+                item => item.id === eventId
+
+            );
+
+
+        if (!event) return;
+
+
+
+        const result =
+
+            getCountdownText(event);
+
+
+
+        element.textContent = result.text;
+
+
+
+        /* STATUS COLOURS */
+
+        const status =
+
+            getEventStatus(event);
+
+
+
+        if (status === "active") {
+
+
+            element.style.color = "#8ff0b1";
+
+        }
+
+        else if (status === "completed") {
+
+
+            element.style.color = "#aebfc3";
+
+        }
+
+        else {
+
+
+            element.style.color = "#b9dce4";
+
+        }
+
+
+    });
+
+}
+
+
+
+/* =====================================================
+   MAIN COUNTDOWN
+   ===================================================== */
+
+
+function updateMainCountdown() {
+
+
+    const now = new Date();
+
+
+
+    /* FIND NEXT UPCOMING EXAMINATION */
+
+    const next =
+
+        events.find(
+
+            event => getStartDate(event) > now
+
+        );
+
+
+
+    /* FIND CURRENTLY RUNNING EXAMINATION */
+
+    const active =
+
+        events.find(
+
+            event =>
+
+                getStartDate(event) <= now &&
+
+                getEndDate(event) > now
+
+        );
+
+
+
+    const current = active || next;
+
+
+
+    /* ALL EXAMINATIONS COMPLETED */
+
+    if (!current) {
 
 
         document
+
+            .getElementById("countdownLabel")
+
+            .textContent =
+
+                "VIVA EXAMINATION COMPLETED";
+
+
+        document
+
             .getElementById("nextEvent")
+
             .textContent =
-                "All examinations completed";
+
+                "All Viva Examinations Completed";
 
 
         document
+
             .getElementById("nextDate")
+
             .textContent =
+
                 "Congratulations!";
 
 
         document
+
             .querySelector(".timer")
+
             .innerHTML = `
 
                 <div
+
                     class="time-box"
-                    style="grid-column:1/-1">
+
+                    style="grid-column:1/-1"
+
+                >
 
                     <span>
+
                         ✓
+
                     </span>
 
+
                     <small>
+
                         Completed
+
                     </small>
+
 
                 </div>
 
@@ -1097,157 +2310,355 @@ function updateCountdown() {
 
 
 
-    /* =================================================
-       TARGET
-       ================================================= */
+    /* DETERMINE COUNTDOWN TARGET */
+
+    const isActive = Boolean(active);
+
 
     const target =
-        new Date(next.date);
+
+        isActive
+
+            ? getEndDate(current)
+
+            : getStartDate(current);
+
 
 
     const gap =
+
         target - now;
 
 
 
-    /* =================================================
-       EVENT TITLE
-       ================================================= */
+    /* MAIN EVENT TITLE */
 
     document
+
+        .getElementById("countdownLabel")
+
+        .textContent =
+
+            isActive
+
+                ? "VIVA EXAMINATION IN PROGRESS"
+
+                : "NEXT UPCOMING VIVA EXAMINATION";
+
+
+
+    /* SUBJECT AND ROLL RANGE */
+
+    document
+
         .getElementById("nextEvent")
+
         .textContent =
-            `${next.title} — ${next.type}`;
+
+            `${current.subject} — Roll ${current.rolls}`;
 
 
 
-    /* =================================================
-       EVENT DATE
-       ================================================= */
+    /* DATE AND TIME */
 
     document
+
         .getElementById("nextDate")
+
         .textContent =
 
-            `${formatDate(target)} • ${
-                target.toLocaleTimeString(
-                    [],
-                    {
-                        hour: "2-digit",
-                        minute: "2-digit"
-                    }
-                )
-            }`;
+            `${formatDate(getStartDate(current))} • ` +
+
+            `08:00 AM – 03:00 PM • ` +
+
+            (
+
+                isActive
+
+                    ? "Ends at 03:00 PM"
+
+                    : "Starts at 08:00 AM"
+
+            );
 
 
 
-    /* =================================================
-       TIME CALCULATION
-       ================================================= */
+    /* CALCULATE TIME */
 
-    const totalSeconds =
-
-        Math.max(
-
-            0,
-
-            Math.floor(
-                gap / 1000
-            )
-
-        );
+    const time = getTimeParts(gap);
 
 
 
-    const days =
-
-        Math.floor(
-            totalSeconds / 86400
-        );
-
-
-
-    const hours =
-
-        Math.floor(
-
-            (totalSeconds % 86400)
-            / 3600
-
-        );
-
-
-
-    const minutes =
-
-        Math.floor(
-
-            (totalSeconds % 3600)
-            / 60
-
-        );
-
-
-
-    const seconds =
-
-        totalSeconds % 60;
-
-
-
-    /* =================================================
-       DISPLAY
-       ================================================= */
+    /* UPDATE DISPLAY */
 
     document
+
         .getElementById("days")
+
         .textContent =
 
-            String(days)
-                .padStart(2, "0");
+            String(time.days).padStart(2,"0");
 
 
     document
+
         .getElementById("hours")
+
         .textContent =
 
-            String(hours)
-                .padStart(2, "0");
+            String(time.hours).padStart(2,"0");
 
 
     document
+
         .getElementById("minutes")
+
         .textContent =
 
-            String(minutes)
-                .padStart(2, "0");
+            String(time.minutes).padStart(2,"0");
 
 
     document
+
         .getElementById("seconds")
+
         .textContent =
 
-            String(seconds)
-                .padStart(2, "0");
+            String(time.seconds).padStart(2,"0");
+
 
 }
 
 
 
 /* =====================================================
-   START COUNTDOWN
+   AUTOMATIC REMOVAL OF COMPLETED EXAMS
+
+   When an examination finishes at 03:00 PM:
+
+   1. It disappears from the main routine.
+   2. Its date disappears from the date filter if unused.
+   3. It disappears from individual roll search results.
+   4. The next examination becomes the main countdown.
+
+   The page does not need to be reloaded.
    ===================================================== */
 
-updateCountdown();
 
+let lastVisibleSignature = null;
+
+
+
+function refreshCompletedExams() {
+
+
+    const visibleEvents = getVisibleEvents();
+
+
+    const signature =
+
+        visibleEvents.map(
+
+            event => event.id
+
+        ).join("|");
+
+
+
+    /* REBUILD ONLY WHEN AN EXAMINATION DISAPPEARS */
+
+    if (signature !== lastVisibleSignature) {
+
+
+        lastVisibleSignature = signature;
+
+
+
+        /* UPDATE DATE FILTER */
+
+        populateDateFilter();
+
+
+
+        /* UPDATE MAIN ROUTINE */
+
+        renderSchedule();
+
+
+
+        /* UPDATE PERSONAL SEARCH IF ALREADY SEARCHED */
+
+        if (lastSearchedRoll) {
+
+
+            const currentRoll = lastSearchedRoll;
+
+
+            const matchingEvents =
+
+                getVisibleEvents().filter(
+
+                    event =>
+
+                        rollMatches(
+
+                            event,
+
+                            Number(currentRoll)
+
+                        )
+
+                );
+
+
+
+            if (matchingEvents.length === 0) {
+
+
+                personalResults.style.display = "none";
+
+
+                searchMessage.textContent =
+
+                    `No upcoming viva examination found for Roll No. ${currentRoll}.`;
+
+            }
+
+            else {
+
+
+                personalResults.style.display = "grid";
+
+
+                personalResults.innerHTML =
+
+                    matchingEvents.map(
+
+                        event => createEventCard(event)
+
+                    ).join("");
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+/* =====================================================
+   FILTER EVENT LISTENERS
+   ===================================================== */
+
+
+subjectFilter.addEventListener(
+
+    "change",
+
+    renderSchedule
+
+);
+
+
+dateFilter.addEventListener(
+
+    "change",
+
+    renderSchedule
+
+);
+
+
+
+/* =====================================================
+   ROLL SEARCH BUTTON
+   ===================================================== */
+
+
+document
+
+    .getElementById("searchButton")
+
+    .addEventListener(
+
+        "click",
+
+        searchRoll
+
+    );
+
+
+
+/* SEARCH ON ENTER KEY */
+
+rollInput.addEventListener(
+
+    "keydown",
+
+    function(event) {
+
+
+        if (event.key === "Enter") {
+
+
+            searchRoll();
+
+        }
+
+    }
+
+);
+
+
+
+/* =====================================================
+   START WEBSITE
+   ===================================================== */
+
+
+function updateWebsite() {
+
+
+    /* AUTOMATICALLY REMOVE COMPLETED EXAMS */
+
+    refreshCompletedExams();
+
+
+
+    /* UPDATE MAIN COUNTDOWN */
+
+    updateMainCountdown();
+
+
+
+    /* UPDATE INDIVIDUAL COUNTDOWNS */
+
+    updateIndividualCountdowns();
+
+
+}
+
+
+
+/* INITIAL UPDATE */
+
+updateWebsite();
+
+
+
+/* LIVE UPDATE EVERY SECOND */
 
 setInterval(
 
-    updateCountdown,
+    updateWebsite,
 
     1000
 
 );
+
+
 
 </script>
 
