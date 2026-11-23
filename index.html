@@ -91,6 +91,13 @@ h1 {
     text-align: center;
 }
 
+/* NEW: RED BACKGROUND DURING RUNNING EXAM */
+
+.countdown-card.running {
+    background: rgba(220, 38, 38, 0.35);
+    border: 1px solid rgba(255, 80, 80, 0.6);
+}
+
 .eyebrow {
     margin: 0 0 5px;
     color: #b9cbd0;
@@ -645,11 +652,6 @@ const TIME_ZONE = "Asia/Dhaka";
 
 /* =====================================================
    UPDATED EXAMINATION EVENTS
-
-   All dates and times are Bangladesh local time.
-
-   Start: 08:00 AM
-   End:   03:00 PM
    ===================================================== */
 
 const events = [
@@ -1434,6 +1436,9 @@ function updateMainCountdown() {
 
     const now = new Date();
 
+    const countdownCard =
+        document.querySelector(".countdown-card");
+
     const next =
         events.find(
             event => getStartDate(event) > now
@@ -1449,6 +1454,8 @@ function updateMainCountdown() {
     const current = active || next;
 
     if (!current) {
+
+        countdownCard.classList.remove("running");
 
         document
             .getElementById("countdownLabel")
@@ -1487,6 +1494,13 @@ function updateMainCountdown() {
     }
 
     const isActive = Boolean(active);
+
+    /* NEW: TURN COUNTDOWN CARD RED DURING RUNNING EXAM */
+
+    countdownCard.classList.toggle(
+        "running",
+        isActive
+    );
 
     const target =
         isActive
